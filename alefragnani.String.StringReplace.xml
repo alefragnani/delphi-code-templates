@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<codetemplate	xmlns="http://schemas.borland.com/Delphi/2005/codetemplates"
+				version="1.0.0">
+	<template name="stringrpl" surround="true" invoke="manual">
+		<description>
+			StringReplace all occurrences
+		</description>
+		<author>
+			Alessandro Fragnani
+		</author>
+    <point name="Variable">      
+			<text>Variable</text>
+			<hint>Variable Name</hint>
+		</point>
+    <point name="This">      
+			<text>This</text>
+			<hint>Replace This String</hint>
+		</point>
+    <point name="That">      
+			<text>That</text>
+			<hint>For That String</hint>
+		</point>
+    <point name="Options">      
+			<text>rfReplaceAll, rfIgnoreCase</text>
+			<hint>Replace Options</hint>
+		</point>
+		<code language="Delphi" delimiter="|"><![CDATA[StringReplace(|Variable|, '|This|', '|That|', [|Options|]);|*||end|]]>
+		</code>
+	</template>
+</codetemplate>

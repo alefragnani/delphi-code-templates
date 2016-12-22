@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<codetemplate	xmlns="http://schemas.borland.com/Delphi/2005/codetemplates"
+				version="1.0.0">
+	<template name="DUnitDPRUses" invoke="manual">
+		<description>
+			DUnit (DPR Uses)
+		</description>
+		<author>
+			Alessandro Fragnani
+		</author>
+    <point name="UnitName">
+			<text>UnitName</text>
+			<hint>Unit Name</hint>
+		</point>
+		<code language="Delphi" delimiter="|"><![CDATA[uses
+  SysUtils,
+  TestFrameWork,
+  TextTestRunner,
+  XMLTestRunnerNUnit,
+  |UnitName|Tests in '|UnitName|Tests.pas',
+  |UnitName| in '..\src\|UnitName|.pas';]]>
+		</code>
+	</template>
+</codetemplate>

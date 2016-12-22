@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<codetemplate	xmlns="http://schemas.borland.com/Delphi/2005/codetemplates"
+				version="1.0.0">
+	<template name="clonecursor" surround="true" invoke="manual">
+		<description>
+			DataSet Clone Cursor
+		</description>
+		<author>
+			Alessandro Fragnani
+		</author>
+    <script language="Delphi" onenter="false" onleave="true">
+			DeclareVariable(|CloneDataSet|: TClientDataSet);
+		  </script>
+    <point name="CloneDataSet">      
+			<text>CloneDataSet</text>
+			<hint>Clone DataSet Object</hint>
+		</point>
+    <point name="SourceDataSet">      
+			<text>SourceDataSet</text>
+			<hint>Source DataSet Object</hint>
+		</point>
+    <point name="Reset">      
+			<text>Reset</text>
+			<hint>Reset Parameter</hint>
+		</point>
+    <point name="KeepSettings">      
+			<text>KeepSettings</text>
+			<hint>KeepSettings Parameter</hint>
+		</point>
+		<code language="Delphi" delimiter="|"><![CDATA[|CloneDataSet|.CloneCursor(|SourceDataSet|, |Reset|, |KeepSettings|);|*||end|]]>
+		</code>
+	</template>
+</codetemplate>

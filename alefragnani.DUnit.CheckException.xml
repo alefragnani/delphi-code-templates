@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<codetemplate	xmlns="http://schemas.borland.com/Delphi/2005/codetemplates"
+				version="1.0.0">
+	<template name="DUnitCheckException" invoke="manual">
+		<description>
+			DUnit (CheckException)
+		</description>
+		<author>
+			Alessandro Fragnani
+		</author>
+    <point name="Method">
+			<text>Method</text>
+			<hint>Check Exception Method</hint>
+		</point>
+    <point name="ExceptionClass">
+			<text>ExceptionClass</text>
+			<hint>Exception Class to be caugth</hint>
+		</point>
+    <point name="Message">
+			<text>Message</text>
+			<hint>Message to be displayed</hint>
+		</point>
+    <script language="Delphi" onenter="false" onleave="true">
+			InvokeClassCompletion;
+		</script>
+		<code language="Delphi" delimiter="|"><![CDATA[CheckException(|Method|, |ExceptionClass|, |Message|);|*||end|]]>
+		</code>
+	</template>
+</codetemplate>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<codetemplate	xmlns="http://schemas.borland.com/Delphi/2005/codetemplates"
+				version="1.0.0">
+	<template name="DUnitInit" invoke="manual">
+		<description>
+			DUnit Initialization
+		</description>
+		<author>
+			Alessandro Fragnani
+		</author>
+        <point name="ClassName">
+			<text>ClassName</text>
+			<hint>Class Name</hint>
+		</point>
+		<code language="Delphi" delimiter="|"><![CDATA[initialization
+    TestFramework.RegisterTest(T|ClassName|Tests.Suite);]]>
+		</code>
+	</template>
+</codetemplate>

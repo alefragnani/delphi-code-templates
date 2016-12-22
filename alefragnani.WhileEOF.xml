@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<codetemplate	xmlns="http://schemas.borland.com/Delphi/2005/codetemplates"
+				version="1.0.0">
+	<template name="whileeof" surround="true" invoke="manual">
+		<description>
+			While Loop (DataSet.EOF)
+		</description>
+		<author>
+			Alessandro Fragnani
+		</author>
+    <point name="DataSet">
+      <script language="Delphi">
+				InvokeCodeCompletion;
+			</script>
+			<text>DataSet</text>
+			<hint>DataSet Name</hint>
+		</point>
+		<code language="Delphi" delimiter="|"><![CDATA[|DataSet|.First;
+while not |DataSet|.EOF do
+begin
+|selected||*||end|
+  |DataSet|.Next;
+end;
+]]>
+		</code>
+	</template>
+</codetemplate>

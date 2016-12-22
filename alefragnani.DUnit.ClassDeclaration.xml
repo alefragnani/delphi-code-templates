@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<codetemplate	xmlns="http://schemas.borland.com/Delphi/2005/codetemplates"
+				version="1.0.0">
+	<template name="DUnitDPRClass" invoke="manual">
+		<description>
+			DUnit (Class Declaration)
+		</description>
+		<author>
+			Alessandro Fragnani
+		</author>
+    <point name="ClassName">
+			<text>ClassName</text>
+			<hint>Class Name</hint>
+		</point>
+    <point name="ObjectName">
+			<text>ObjectName</text>
+			<hint>Object Name</hint>
+		</point>
+    <point name="TestMethod">
+			<text>TestMethod</text>
+			<hint>Method Name</hint>
+		</point>
+		<code language="Delphi" delimiter="|"><![CDATA[T|ClassName|Tests = class(TTestCase)
+private
+  F|ObjectName|: T|ClassName|;
+protected
+  procedure SetUp; override;
+  procedure TearDown; override;
+published
+  procedure Test|TestMethod|;
+end;]]>
+		</code>
+	</template>
+</codetemplate>

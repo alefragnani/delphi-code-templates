@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<codetemplate	xmlns="http://schemas.borland.com/Delphi/2005/codetemplates"
+				version="1.0.0">
+	<template name="fbnf" invoke="manual">
+		<description>
+			DataSet FieldByName.AsFloat
+		</description>
+		<author>
+			Alessandro Fragnani
+		</author>
+    <point name="DataSet">
+			<text>DataSet</text>
+			<hint>DataSet Object</hint>
+		</point>
+    <point name="FieldName">
+			<text>FieldName</text>
+			<hint>Field Name</hint>
+		</point>
+		<code language="Delphi" delimiter="|"><![CDATA[|DataSet|.FieldByName('|FieldName|').AsFloat|end|]]>
+		</code>
+	</template>
+</codetemplate>

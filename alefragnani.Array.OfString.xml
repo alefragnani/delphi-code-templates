@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<codetemplate	xmlns="http://schemas.borland.com/Delphi/2005/codetemplates"
+				version="1.0.0">
+	<template name="arrayofs" surround="true" invoke="manual">
+		<description>
+			Array Of String Constant
+		</description>
+		<author>
+			Alessandro Fragnani
+		</author>
+    <point name="variable">      
+			<text>variable</text>
+			<hint>Variable Name</hint>
+		</point>
+    <point name="low">      
+			<text>low</text>
+			<hint>Lower Boundary Limit</hint>
+		</point>
+    <point name="high">      
+			<text>high</text>
+			<hint>Higher Boundary Limit</hint>
+		</point>
+    <point name="value1">      
+			<text>value1</text>
+			<hint>Array Values</hint>
+		</point>
+    <point name="value2">      
+			<text>value2</text>
+			<hint>Array Values</hint>
+		</point>
+    <point name="KeepSettings">      
+			<text>KeepSettings</text>
+			<hint>KeepSettings Parameter</hint>
+		</point>
+		<code language="Delphi" delimiter="|"><![CDATA[|variable|: array[|low|..|high|] of string = ('|value1|', '|value2|'|end|);]]>
+		</code>
+	</template>
+</codetemplate>
