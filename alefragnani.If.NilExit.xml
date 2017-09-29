@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<codetemplate	xmlns="http://schemas.borland.com/Delphi/2005/codetemplates"
+				version="1.0.0">
+	<template name="ifnilexit" invoke="auto">
+		<description>
+			Creates code that checks for nil and then exit
+		</description>
+		<author>
+          Alessandro Fragnani
+		</author>
+        <point name="variable">
+            <text>
+                variable
+            </text>
+            <hint>
+                Variable that will be checked for nil
+            </hint>
+        </point>
+        <point name="classtype">
+            <text>
+                classtype
+            </text>
+            <hint>
+                Class name to be created
+            </hint>
+        </point>
+		<code language="Delphi" delimiter="|"><![CDATA[if |variable| = nil then
+   exit|end|);]]>
+		</code>
+	</template>
+</codetemplate>

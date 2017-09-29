@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<codetemplate	xmlns="http://schemas.borland.com/Delphi/2005/codetemplates"
+				version="1.0.0">
+	<template name="classi" invoke="manual">
+		<description>
+			class declaration (InterfacedObject)
+		</description>
+		<author>
+			Alessandro Fragnani
+		</author>
+		<point name="classname">
+			<text>
+				MyClass
+			</text>
+			<hint>
+				class name
+			</hint>
+		</point>
+		<point name="interface">
+			<script language="Delphi">
+				InvokeCodeCompletion;
+			</script>
+			<text>
+				Interface
+			</text>
+			<hint>
+				interface name
+			</hint>
+		</point>
+		<code language="Delphi" context="typedecl" delimiter="|"><![CDATA[T|classname| = class(TInterfacedObject, |interface|)
+|*||end|
+end;
+]]>
+		</code>
+	</template>
+</codetemplate>

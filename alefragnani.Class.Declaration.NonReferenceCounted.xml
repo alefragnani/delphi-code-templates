@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<codetemplate	xmlns="http://schemas.borland.com/Delphi/2005/codetemplates"
+				version="1.0.0">
+	<template name="classnrc" invoke="manual">
+		<description>
+			class declaration (non-reference-counted)
+		</description>
+		<author>
+			Alessandro Fragnani
+		</author>
+		<point name="classname">
+			<text>
+				MyClass
+			</text>
+			<hint>
+				class name
+			</hint>
+		</point>
+		<point name="interface">
+			<script language="Delphi">
+				InvokeCodeCompletion;
+			</script>
+			<text>
+				Interface
+			</text>
+			<hint>
+				interface name
+			</hint>
+		</point>
+		<code language="Delphi" context="typedecl" delimiter="|"><![CDATA[T|classname| = class(TObject, |interface|)
+protected
+  function QueryInterface(const IID: TGUID; out Obj): HResult; stdcall;
+  function _AddRef: Integer; stdcall;
+  function _Release: Integer; stdcall;
+|*||end|
+end;
+]]>
+		</code>
+	</template>
+</codetemplate>

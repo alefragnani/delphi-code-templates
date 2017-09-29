@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<codetemplate	xmlns="http://schemas.borland.com/Delphi/2005/codetemplates"
+				version="1.0.0">
+	<template name="classinrc" invoke="manual">
+		<description>
+			class implementation (non-reference-counted)
+		</description>
+		<author>
+			Alessandro Fragnani
+		</author>
+		<point name="classname">
+			<text>
+				MyClass
+			</text>
+			<hint>
+				class name
+			</hint>
+		</point>
+		<code language="Delphi" context="typedecl" delimiter="|"><![CDATA[function |classname|.QueryInterface(const IID: TGUID; out Obj): HResult;
+begin
+  if GetInterface(IID, Obj) then
+    Result := S_OK
+  else
+    Result := E_NOINTERFACE;
+end;
+
+function |classname|._AddRef: Integer;
+begin
+  Result := -1;
+end;
+
+function |classname|._Release: Integer;
+begin
+  Result := -1;
+end;|*||end|
+]]>
+		</code>
+	</template>
+</codetemplate>
